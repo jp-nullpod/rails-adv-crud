@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     member do
       get :chef
     end
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:index, :new, :create]
   end
+  resources :reviews, only: [:show, :edit, :update, :destroy]
 end
